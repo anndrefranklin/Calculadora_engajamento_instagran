@@ -1,0 +1,97 @@
+<html lang="pt-br">
+  <head>
+    <title>Calculadora</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Calculadora Instagram</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img">
+        <img
+          src="img/instagram.png"
+          alt="logo_raio"
+          width="200"
+          height="100"
+        />
+        <h1>Calculadora de Engajamento</h1>       
+      </div>
+
+      <div class="form-label-group">
+        <label class="label-form">Curtidas</label>
+        <input
+          id="curtidas"
+          type="number"
+          class="form-control"
+          placeholder="Digite a quantidade de Curtidas"
+        />
+      </div>
+      <br />
+
+      <div class="form-label-group" id="campos">
+        <label class="label-form">Comentários</label>
+        <input
+          id="comentarios"
+          type="number"
+          class="form-control"
+          placeholder="Digite a quantidade de Comentários"
+        />
+      </div>
+      <br />
+
+      <div class="form-label-group" id="campos">
+        <label class="label-form">Seguidores</label>
+        <input
+          id="seguidores"
+          type="number"
+          class="form-control"
+          placeholder="Digite a quantidade de Seguidores"
+        />
+      </div>
+      <br />
+
+      <!--BOTÃO CALCULAR ENGAJAMENTO-->
+      <button
+        class="btn btn-primary btn-md"
+        id="calcular"
+        onclick="calcular()"
+      >
+        Calcular Engajamento
+      </button>
+  
+      <!--BOTÃO LIMPAR CAMPOS-->
+      <button
+        class="btn btn-primary btn-md"
+        id="limparCampos"
+        type="reset"
+        value="limparCampos"
+        onclick="limparCampos()"
+      >
+        Limpar Campos
+      </button>
+      <br />
+      <br />
+
+      <!--RESULTADO DO CALCULO-->
+      <h1>Sua taxa de engajamento é:</h1>
+      <p id="resultado">???</p>
+
+      <ul class="bloco">
+        <li>Menor que 1% = engajamento baixo</li>
+        <li>Entre 1% e 3.5% = engajamento médio</li>
+        <li>Entre 3.5% e 6% = engajamento alto</li>
+        <li>Mais que 6% = engajamento excelente</li>
+      </ul>
+      <!--RODAPÉ-->
+      <p class="footer">Desenvolvido por André Franklin &copy; 2022</p>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
