@@ -8,6 +8,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
     />
+    <script language="javascript"> //contador de leads
+      function setCookie(nome, valor, dias){ 
+      diasms = (new Date()) .getTime() + 1000 * 3600 * 24 * dias; 
+      dias = new Date(diasms); 
+      expires = dias.toGMTString(); 
+      document.cookie = escape(nome) + "=" + escape(valor) + "; expires=" + expires; 
+      } 
+      </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <title>Calculadora Instagram</title>
@@ -90,8 +98,22 @@
         <li>Mais que 6% = engajamento excelente</li>
       </ul>
       <!--RODAPÉ-->
-      <p class="footer">Desenvolvido por André Franklin &copy; 2022</p>
+      <p class="footer">Developer e Designer André Franklin &copy; 2022</p>
+      <script language="javascript"> //contador de leads
+        if (!document.cookie){
+        setCookie("cookie", "1", 365);
+        document.write("<font face='verdana' size='1'>Leads : 1</font>");
+        } else {
+        var cont = document.cookie;
+        var dividindo = cont.split("=");
+        //document.write(dividindo[1]);
+        var numero = parseInt(dividindo[1]);
+        var soma = numero + 1;
+        document.write("<font face='verdana' size='1'>Leads : " + soma + "</font>");
+        setCookie("cookie", soma, 365);
+        }
+        </script>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/script.js"></script> 
   </body>
 </html>

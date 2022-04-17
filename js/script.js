@@ -21,3 +21,5 @@ function limparCampos(){
         curtidas.focus();
     }
 }
+
+
